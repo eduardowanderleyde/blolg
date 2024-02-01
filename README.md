@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is study in Ruby for a miniblog  to know how to use Ruby commands to a CRUD in a MVC, creating a db, views, models and controllers.
 
-Things you may want to cover:
+-To start the MVC creation:
+command line:
+rails g scaffold Post title description:text
 
-* Ruby version
+-Use Sqlite3 to database.
 
-* System dependencies
+command line: 
+rails db:migrate
 
-* Configuration
+-How to change the route of the first page, and the posts page.
 
-* Database creation
+-How to validates and Post
 
-* Database initialization
+Ruby scripts that describe changes to the database schema, such as creating tables, adding columns, or modifying indexes.
 
-* How to run the test suite
+To generate a model for User i used:
 
-* Services (job queues, cache servers, search engines, etc.)
+rails g model user first_name last_name
 
-* Deployment instructions
+To generate a controller i use:
+rails g home index
 
-* ...
+* Ruby version 3.2.2
+
+* 
+
