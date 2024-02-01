@@ -2,6 +2,8 @@
 
 This project is study in Ruby for a miniblog  to know how to use Ruby commands to a CRUD in a MVC, creating a db, views, models and controllers.
 
+https://github.com/eduardowanderleyde/crud-ruby/assets/103546791/497c1380-a7cb-48b7-95a3-a24ce7123c58
+
 -To start the MVC creation:
 command line:
 rails g scaffold Post title description:text
@@ -26,5 +28,5 @@ rails g home index
 
 * Ruby version 3.2.2
 
-* 
+
 
