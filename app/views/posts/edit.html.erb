@@ -1,10 +1,84 @@
-<h1>Editing post</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Post</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 40px;
+    }
 
-<%= render "form", post: @post %>
+    h1 {
+      color: #1a1a1a;
+      text-align: center;
+    }
 
-<br>
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+      max-width: 600px; /* Defina a largura máxima do formulário */
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-<div>
-  <%= link_to "Show this post", @post %> |
-  <%= link_to "Back to posts", posts_path %>
-</div>
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .actions {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .actions a {
+      margin-right: 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .actions a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Editing Post</h1>
+
+  <%= render "form", post: @post %>
+
+  <div class="actions">
+    <%= link_to "Show this post", @post %> |
+    <%= link_to "Back to posts", posts_path %>
+  </div>
+</body>
+</html>

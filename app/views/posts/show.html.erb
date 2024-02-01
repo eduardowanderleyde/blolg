@@ -1,10 +1,76 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @post.title %></title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 40px;
+    }
 
-<%= render @post %>
+    p.notice {
+      color: green;
+    }
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+    .post {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
-</div>
+    .post-title {
+      font-size: 24px;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+
+    .post-content {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      margin-top: 20px;
+    }
+
+    .actions a {
+      margin-right: 10px;
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .actions a:hover {
+      text-decoration: underline;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+
+  <%= render @post %>
+
+  <div class="actions">
+    <%= link_to "Edit this post", edit_post_path(@post) %> |
+    <%= link_to "Back to posts", posts_path %>
+    
+    <%= button_to "Destroy this post", @post, method: :delete, class: "delete-btn" %>
+  </div>
+</body>
+</html>

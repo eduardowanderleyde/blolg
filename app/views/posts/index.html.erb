@@ -1,15 +1,84 @@
-<p style="color: green"><%= notice %></p>
+# app/views/posts/index.html.erb
 
-<h1>Eduardo Posts</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eduardo's Posts</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 40px;
+    }
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
+    h1 {
+      color: #1a1a1a;
+      text-align: center;
+    }
 
-<%= link_to "New post", new_post_path %>
-<%= link_to "Back", root_path %>
+    p.notice {
+      color: green;
+    }
+
+    #posts {
+      margin-top: 20px;
+    }
+
+    .post {
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .post a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .post a:hover {
+      text-decoration: underline;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+
+    .actions a {
+      margin-right: 10px;
+      color: #fff;
+      background-color: #007bff;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .actions a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+
+  <h1>Eduardo's Posts</h1>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <%= render post %>
+        <p class="actions">
+          <%= link_to "Show this post", post %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= link_to "New post", new_post_path %>
+    <%= link_to "Back", root_path %>
+  </div>
+</body>
+</html>

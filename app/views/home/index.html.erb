@@ -1,11 +1,68 @@
-<h1>Heeey! Welcome to my Eduardo Wanderley Website!</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!-- app/views/home/index.html.erb -->
 
-<% @posts.each do |post| %>
-  <% if post.description? %>
-    <h1> <%= link_to post.title, posts_path(post) %> </h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eduardo Wanderley's Website</title>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Cor de fundo mais clara */
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 40px;
+    }
+
+    h1 {
+      color: #1a1a1a;
+      text-align: center;
+    }
+
+    p {
+      color: #666;
+      text-align: center;
+    }
+
+    h1 a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    h1 a:hover {
+      text-decoration: underline;
+    }
+
+    .posts-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .posts-link a {
+      color: #fff;
+      background-color: #28a745;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .posts-link a:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Eduardo Wanderley's MiniBlog!</h1>
+  <p>Explore my thoughts, projects, and experiences.</p>
+  <p>Find me in <code>app/views/home/index.html.erb</code></p>
+
+  <% @posts.each do |post| %>
+    <% if post.description? %>
+      <h1><%= link_to post.title, posts_path(post) %></h1>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= link_to "Posts", posts_path %>
-
+  <div class="posts-link">
+    <%= link_to "View All Posts", posts_path %>
+  </div>
+</body>
+</html>

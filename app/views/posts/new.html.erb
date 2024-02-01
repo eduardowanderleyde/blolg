@@ -1,9 +1,79 @@
-<h1>New post</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Post</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      margin: 40px;
+    }
 
-<%= render "form", post: @post %>
+    h1 {
+      color: #1a1a1a;
+      text-align: center;
+    }
 
-<br>
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
 
-<div>
-  <%= link_to "Back to posts", posts_path %>
-</div>
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .back-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>New Post</h1>
+
+  <%= render "form", post: @post %>
+
+  <div class="back-link">
+    <%= link_to "Back to Posts", posts_path %>
+  </div>
+</body>
+</html>
